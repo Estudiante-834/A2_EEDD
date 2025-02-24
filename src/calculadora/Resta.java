@@ -91,10 +91,10 @@ public class Resta {
 		
 		do {
 			System.out.println("Seleccione una opción:");
-			System.out.println("Operaciones Resta 2 reales (d)");
-			System.out.println("Operaciones Resta 2 enteros (e)");
-			System.out.println("Operaciones Resta 3 reales (t)");
-			System.out.println("Operaciones Resta Acumulador (a)");
+			System.out.println("Operacion Resta 2 reales (d)");
+			System.out.println("Operacion Resta 2 enteros (e)");
+			System.out.println("Operacion Resta 3 reales (t)");
+			System.out.println("Operacion Resta Acumulador (a)");
 			System.out.println("Get valor acumulado (g)");
 			System.out.println("Set valor acumulado (h)");
 			System.out.println("Salir (q)");

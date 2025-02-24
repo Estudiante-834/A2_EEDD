@@ -1,6 +1,7 @@
 package calculadora;
 
 import java.lang.Math;
+import java.util.Scanner;
 
 /**
  * Clase general Producto para las operaciones básicas de producto y potencia.
@@ -62,5 +63,41 @@ public class Producto {
 	 */
 	public static double potencia(double base, double exp) {
 		return Math.pow(base, exp);
-	} 
+	}
+	
+	public static void menu(Scanner sc) {	
+		char opcion;
+		
+		do {
+			System.out.println("Seleccione una opción:");
+			System.out.println("Operacion Producto 2 reales (d)");
+			System.out.println("Operacion Producto 2 enteros (e)");
+			System.out.println("Operacion Producto 3 reales (t)");
+			System.out.println("Operacion Potencia (p)");
+			System.out.println("Salir (q)");
+			
+			opcion = sc.next().toLowerCase().charAt(0);
+			
+			switch (opcion) {
+				case 'd':
+					Producto.producto(7.5, 5.0);
+					break;
+				case 'e':
+					Producto.producto(2, 4);
+					break;
+				case 't':
+					Producto.producto(1.0, -2.0, -3.8);
+					break;
+				case 'p':
+					Producto.potencia(7.0, 2.0);
+					break;
+				case 'q':
+					break;
+				default:
+					System.out.println("Opción no válida.");
+			}
+			
+		} while (opcion != 'q');
+		
+	}
 }
