@@ -15,6 +15,7 @@ public class Main {
 			System.out.println("Operaciones Suma (s)");
 			System.out.println("Operaciones Resta (r)");
 			System.out.println("Operaciones Producto (p)");
+			System.out.println("Operaciones Cociente (c)");
 			System.out.println("Salir (q)");
 			
 			opcion = sc.next().toLowerCase().charAt(0);
