@@ -17,7 +17,7 @@ class TestResta {
 		assertEquals(-0.1, Resta.resta(0.1, 0.2));
 		assertEquals(5.0, Resta.resta(15.5, 10.5));
 
-		// Valor delta en assertEquals para comprobar imprecision de puntos flotantes.
+		// Valor delta en assertEquals para comprobar imprecision de comas flotantes.
 		assertEquals(0.2, Resta.resta(0.3, 0.1), 0.00001);
 
 		assertEquals(-4.0, Resta.resta(1.0, 2.0, 3.0));

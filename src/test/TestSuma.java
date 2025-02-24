@@ -11,7 +11,7 @@ class TestSuma {
 	/**
 	 * Test métodos con suma de números reales, tanto de 2 o 3 parámetros.
 	 * Se prueba las combinaciones de suma de valores positivos, negativos, ceros o ambos.
-	 * También se tiene en cuenta los casos limítrofes como la imprecisión de punteros flotantes
+	 * También se tiene en cuenta los casos limítrofes como la imprecisión de comas flotantes
 	 * en los métodos con números reales.
 	 */
 	@Test
@@ -20,7 +20,7 @@ class TestSuma {
 		assertEquals(-11.5, Suma.suma(-1.5, -10));
 		assertEquals(21.5, Suma.suma(10, 11.5));
 		
-		// Valor delta para la imprecisión de puntos flotantes
+		// Valor delta para la imprecisión de comas flotantes
 		assertEquals(-0.1, Suma.suma(1.2, -1.3), 0.10000);
 		
 		assertEquals(6.0, Suma.suma(1.0, 2.0, 3));

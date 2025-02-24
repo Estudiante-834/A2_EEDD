@@ -1,9 +1,8 @@
 package calculadora;
 
+import java.lang.Math;
+
 public class Producto {
-//	3. Producto de tres números reales, tendrá 3 parámetros de entrada y uno de salida que será la 
-//	solución. 
-//	4. Potencia, tendrá dos parámetros de entrada (base y exponente) y uno de salida que será la solución
 	
 	public static double producto(double num1, double num2) {
 		return num1 * num2;
@@ -16,4 +15,8 @@ public class Producto {
 	public static double producto(double num1, double num2, double num3) {
 		return num1 * num2 *num3;
 	}
+	
+	public static double potencia(double base, double exp) {
+		return Math.pow(base, exp);
+	} 
 }
