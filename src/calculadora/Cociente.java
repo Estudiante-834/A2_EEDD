@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 
  * <p>La clase tiene un método de {@link #cocienteReales(double, double)} que divide dos 
  * números reales retornando un cociente real, y otro método 
- * {@link #cocienteEnteros(long, long) que divide dos números enteros 
+ * {@link #cocienteEnteros(long, long)} que divide dos números enteros 
  * retornando un entero de la función piso. 
  * Tambíen contiene métodos para el inverso multiplicativo y raíz cuadrada 
  * de númerós reales.</p>
