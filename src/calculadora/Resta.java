@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Resta {
 	/**
 	 * Valor acumulado inicial a NaN. 
-	 * Se actualiza con llamadas a {@link #sumaAcumulado(double)}.
+	 * Se actualiza con llamadas a {@link #restaAcumulada(double)}.
 	 */
 	private static double acumulado = Double.NaN;
 

@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Clase general Producto para las operaciones básicas de producto y potencia.
  * 
  * <p>La clase tiene métodos de producto tanto para números reales y enteros que han sido implementado 
- * utilizando una única firma para la sobrecarga de métodos. Para los reales, {@link {{@link #producto(double, double)}
+ * utilizando una única firma para la sobrecarga de métodos. Para los reales, {{@link #producto(double, double)}
  * acepta 2 números mientras que {@link #producto(doble, doble, doble)} acepta 3.
  * El método {@link #potencia(double, double)} utiliza el método Math.pow. </p>
  * 

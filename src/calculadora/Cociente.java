@@ -12,7 +12,7 @@ import java.util.Scanner;
  * Tambíen contiene métodos para el inverso multiplicativo y raíz cuadrada 
  * de númerós reales.</p>
  * 
- * @author Estudiante-834
+ * @author Estudiante-834 
  * @version 1.0
  */
 public class Cociente {
