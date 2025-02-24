@@ -27,7 +27,7 @@ public class Main {
 				Resta.menu(sc);
 				break;
 			case 'p':
-//				Producto.menu(sc);
+				Producto.menu(sc);
 				break;
 			case 'q':
 				break;
