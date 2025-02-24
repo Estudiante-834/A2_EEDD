@@ -7,7 +7,10 @@ import org.junit.jupiter.api.Test;
 import calculadora.Producto;
 
 class TestProducto {
-
+	/**
+	 * Test de producto con números reales. Se incluye valor delta de {@code assertEquals()}
+	 * para tener en cuenta la imprecisión de comas flotantes.
+	 */
 	@Test
 	void testProductoReales() {
 		assertEquals(5.5, Producto.producto(1.0, 5.5));
@@ -23,6 +26,9 @@ class TestProducto {
 		assertEquals(-9.0, Producto.producto(1.5, -2.0, 3.0));
 	}
 	
+	/**
+	 * Tests de producto de números entero.
+	 */
 	@Test
 	void testProductoEnteros() {
 		assertEquals(0, Producto.producto(0, 1));
@@ -31,6 +37,13 @@ class TestProducto {
 		assertEquals(10, Producto.producto(5, 2));
 	}
 
+	/**
+	 * Test potencia de base y exponente real. Se prueba casos limítrofes como exponente cero, 
+	 * base fraccional y exponente negtivo. También se incluye valor delta para manejar la imprecisión 
+	 * de comas flotantes en el tipo {@code Double}. El caso limítrofe de base y exponente 0 
+	 * de {@code Math.pow} también se pone a prueba según la documentación original del método.  
+	 * 
+	 */
 	@Test
 	void testPotencia() {
 		assertEquals(1, Producto.potencia(1.0, 0));
