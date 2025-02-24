@@ -1,6 +1,7 @@
 package main;
 
 import java.util.Scanner;
+import calculadora.*;
 
 public class Main {
 
@@ -12,6 +13,7 @@ public class Main {
 		do {
 			System.out.println("Seleccione una opción:");
 			System.out.println("Operaciones Suma (s)");
+			System.out.println("Operaciones Resta (r)");
 			System.out.println("Salir (q)");
 			
 			opcion = sc.next().toLowerCase().charAt(0);
@@ -21,7 +23,7 @@ public class Main {
 				Suma.menu(sc);
 				break;
 			case 'r':
-				
+				Resta.menu(sc);
 				break;
 			case 'q':
 				break;
