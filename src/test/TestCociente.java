@@ -7,7 +7,10 @@ import org.junit.jupiter.api.Test;
 import calculadora.Cociente;
 
 class TestCociente {
-
+	/**
+	 * Test cociente de reales, haciendo pruebas con diferentes combinaciones de positivos, 
+	 * negativos o ambos. Se prueba el caso limítrofe de división por 0.
+	 */
 	@Test
 	void testCocienteReales() {
 		assertEquals(0.5, Cociente.cocienteReales(1.0, 2.0));
@@ -18,6 +21,10 @@ class TestCociente {
 		assertDoesNotThrow(() -> Cociente.cocienteReales(0, 1.0));
 	}
 	
+	/**
+	 * Test cociente de números entero, probando diferente combinaciones de positivos, 
+	 * negativos o ambos. También se prueba la división por 0.
+	 */
 	@Test
 	void testCocienteEnteros() {
 		assertEquals(5, Cociente.cocienteEnteros(10, 2));
@@ -30,6 +37,10 @@ class TestCociente {
 		assertDoesNotThrow(() -> Cociente.cocienteEnteros(0, 3));
 	}
 
+	/**
+	 * Test del método del inverso multiplicativo. Se toma el inverso de distintos números
+	 * reales y se prueba con el número 0.
+	 */
 	@Test
 	void testInverso() {
 		assertEquals(1, Cociente.inverso(1));
@@ -42,6 +53,10 @@ class TestCociente {
 		assertThrows(ArithmeticException.class, () -> Cociente.inverso(0));
 	}
 	
+	/**
+	 * Test del método de raíz cuadrada. Se utliza valores delta para mejorar la precisión
+	 * de los doubles y se prueba con valores negativo.
+	 */
 	@Test
 	void testRaiz() {
 		assertEquals(0, Cociente.raiz(0));
