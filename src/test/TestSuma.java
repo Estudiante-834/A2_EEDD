@@ -16,17 +16,17 @@ class TestSuma {
 	 */
 	@Test
 	void testSumaReales() {
-		assertEquals(Suma.suma(0, 0), 0);
-		assertEquals(Suma.suma(-1.5, -10), -11.5);
-		assertEquals(Suma.suma(10, 11.5), 21.5);
+		assertEquals(0, Suma.suma(0, 0));
+		assertEquals(-11.5, Suma.suma(-1.5, -10));
+		assertEquals(21.5, Suma.suma(10, 11.5));
 		
 		// Valor delta para la imprecisión de puntos flotantes
-		assertEquals(Suma.suma(1.2, -1.3), -0.1, 0.10000);
+		assertEquals(-0.1, Suma.suma(1.2, -1.3), 0.10000);
 		
-		assertEquals(Suma.suma(1.0, 2.0, 3), 6.0);
-		assertEquals(Suma.suma(1.5, 2.0, 3.5), 7.0);
-		assertEquals(Suma.suma(-10, 2.0, -5.5), -13.5);
-		assertEquals(Suma.suma(-3.0, -4.0, -5.0), -12.0);
+		assertEquals(6.0, Suma.suma(1.0, 2.0, 3));
+		assertEquals(7.0, Suma.suma(1.5, 2.0, 3.5));
+		assertEquals(-13.5, Suma.suma(-10, 2.0, -5.5));
+		assertEquals(-12.0, Suma.suma(-3.0, -4.0, -5.0));
 	}
 	
 	/**
@@ -35,10 +35,10 @@ class TestSuma {
 	 */
 	@Test
 	void testSumaEnteros() {
-		assertEquals(Suma.suma(0, 0), 0);
-		assertEquals(Suma.suma(1, -1), 0);
-		assertEquals(Suma.suma(-10, -20), -30);
-		assertEquals(Suma.suma(12, 22), 34);
+		assertEquals(0, Suma.suma(0, 0));
+		assertEquals(0, Suma.suma(1, -1));
+		assertEquals(-30, Suma.suma(-10, -20));
+		assertEquals(34, Suma.suma(12, 22));
 	}
 	
 	/**
@@ -47,19 +47,19 @@ class TestSuma {
 	@Test
 	void testSumaAcumulador() {
 		Suma.sumaAcumulado(10);
-		assertEquals(Suma.getAcumulado(), 10);
+		assertEquals(10, Suma.getAcumulado());
 		
 		Suma.sumaAcumulado(5);
-		assertEquals(Suma.getAcumulado(), 15);
+		assertEquals(15, Suma.getAcumulado());
 		
 		Suma.sumaAcumulado(-20);
-		assertEquals(Suma.getAcumulado(), -5);
+		assertEquals(-5, Suma.getAcumulado());
 		
 		Suma.sumaAcumulado(0);
-		assertEquals(Suma.getAcumulado(), -5);
+		assertEquals(-5, Suma.getAcumulado());
 		
 		Suma.setAcumulador(0);
-		assertEquals(Suma.getAcumulado(), 0);
+		assertEquals(0, Suma.getAcumulado());
 	}
 	
 

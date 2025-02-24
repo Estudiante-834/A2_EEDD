@@ -12,17 +12,17 @@ class TestResta {
 	 */
 	@Test
 	void testRestaReales() {
-		assertEquals(Resta.resta(0, 0), 0);
-		assertEquals(Resta.resta(1.5, 2.0), -0.5);
-		assertEquals(Resta.resta(0.1, 0.2), -0.1);
-		assertEquals(Resta.resta(15.5, 10.5), 5.0);
+		assertEquals(0, Resta.resta(0, 0));
+		assertEquals(-0.5, Resta.resta(1.5, 2.0));
+		assertEquals(-0.1, Resta.resta(0.1, 0.2));
+		assertEquals(5.0, Resta.resta(15.5, 10.5));
 
 		// Valor delta en assertEquals para comprobar imprecision de puntos flotantes.
-		assertEquals(Resta.resta(0.3, 0.1), 0.2, 0.00001);
+		assertEquals(0.2, Resta.resta(0.3, 0.1), 0.00001);
 
-		assertEquals(Resta.resta(1.0, 2.0, 3.0), -4.0);
-		assertEquals(Resta.resta(1.0, -2.5, 3.0), 0.5);
-		assertEquals(Resta.resta(-1.0, -20.0, -4.0), 23.0);
+		assertEquals(-4.0, Resta.resta(1.0, 2.0, 3.0));
+		assertEquals(0.5, Resta.resta(1.0, -2.5, 3.0));
+		assertEquals(23.0, Resta.resta(-1.0, -20.0, -4.0));
 		
 	}
 	
@@ -31,11 +31,11 @@ class TestResta {
 	 */
 	@Test
 	void testRestaEnteros() {
-		assertEquals(Resta.resta(0, 0), 0);
-		assertEquals(Resta.resta(10, 5), 5);
-		assertEquals(Resta.resta(-10, 5), -15);
-		assertEquals(Resta.resta(10, 50), -40);
-		assertEquals(Resta.resta(0, -5), 5);
+		assertEquals(0, Resta.resta(0, 0));
+		assertEquals(5, Resta.resta(10, 5));
+		assertEquals(-15, Resta.resta(-10, 5));
+		assertEquals(-40, Resta.resta(10, 50));
+		assertEquals(5, Resta.resta(0, -5));
 	}
 	
 	/**
@@ -46,19 +46,19 @@ class TestResta {
 	@Test
 	void testRestaAcumulador() {
 		Resta.restaAcumulada(10);
-		assertEquals(Resta.getAcumulado(), 10);
+		assertEquals(10, Resta.getAcumulado());
 		Resta.restaAcumulada(10);
-		assertEquals(Resta.getAcumulado(), 0);
+		assertEquals(0, Resta.getAcumulado());
 		Resta.restaAcumulada(10);
-		assertEquals(Resta.getAcumulado(), -10);
+		assertEquals(-10, Resta.getAcumulado());
 		Resta.restaAcumulada(-110);
-		assertEquals(Resta.getAcumulado(), 100);
+		assertEquals(100, Resta.getAcumulado());
 		
 		Resta.setAcumulado(0);
-		assertEquals(Resta.getAcumulado(), 0);
+		assertEquals(0, Resta.getAcumulado());
 		
 		Resta.restaAcumulada(-10);
-		assertEquals(Resta.getAcumulado(), 10);	
+		assertEquals(10, Resta.getAcumulado());	
 	}
 
 }
