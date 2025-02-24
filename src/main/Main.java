@@ -29,6 +29,8 @@ public class Main {
 			case 'p':
 				Producto.menu(sc);
 				break;
+			case 'c':
+				Cociente.menu(sc);
 			case 'q':
 				break;
 			default:
